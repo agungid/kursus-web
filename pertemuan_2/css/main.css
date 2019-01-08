@@ -1,0 +1,64 @@
+@font-face {
+	font-family: "Font001";
+	src: url('../font/GreatVibes-Regular.otf');
+}
+
+body{
+	margin:0;
+}
+
+.container {
+ 
+}
+
+.header {
+	background: #f1f1f1;
+	padding: 1px;
+	text-align: center;
+	font-family: Font001;
+	font-size: 50px;
+}
+
+.topnavbar {
+	overflow:hidden;
+	background: black;
+}
+
+.topnavbar a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+}
+
+.topnavbar a:hover {
+	background: white;
+	color: black;
+}
+
+.column {
+	float: left;
+	width: 30%;
+	padding:10px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*Responsive desing for column*/
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+	}
+}
+
+.footer {
+	background: #f1f1f1;
+	padding: 10px;
+	text-align: center;
+}

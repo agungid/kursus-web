@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pewarisan Di CSS</title>
+	<style type="text/css">
+		.container {
+			border: 2px solid red;
+			background-color: #000080;
+			color: white;
+			padding: 10px;
+		}
+
+		div p {
+			border: inherit;
+			font-family: Courier, monospace;
+		}
+
+		@font-face {
+			font-family: "Font001";
+			src: url('font/GreatVibes-Regular.otf');
+		}
+
+		div .font1 {
+			font-family: Font001;
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>Belajar pewarisan di CSS</p>
+		<p class="font1">Sample font berbeda</p>
+	</div>
+</body>
+</html>

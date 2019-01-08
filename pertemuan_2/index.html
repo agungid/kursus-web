@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar CSS Dasar</title>
+	<style type="text/css">
+		.container2
+		{
+			background-color: blue;
+			border: 2px solid aqua;
+			margin-top: 10px;
+			color: white;
+		}
+
+		div p, h3 {
+			color: green;
+		}
+
+
+		#container3 {
+			margin-top:10px;
+			border: 1px solid red;
+			color: red;
+		}
+
+
+		[type="text"] {
+			color: red;
+		}
+
+		[href] {
+			color: white;
+			text-decoration: none;
+		}
+
+		/**
+		* Element Tag selector memiliki nilai 0001
+		* Selector Class dan Attribute memiliki nilai 0010
+		* Selector ID memiliki nilai 0100
+		* Inline style memiliki nilai 1000
+		*/
+
+		div {
+			font-weight: bold;
+			padding:5px;
+			background-color: green;
+			color: yellow;
+		}
+
+		.container {
+			font-weight: bold;
+			padding:10px;
+			background-color: aqua;
+			color: white;
+		}
+
+		#container {
+			font-weight: bold;
+			padding:15px;
+			background-color: blue;
+			color: white;	
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container" id="container" style="background-color: black">
+		Contoh prioritas
+	</div>
+	<br/>
+	<div style="border: 1px solid red;">
+		<p style="color:red">Contoh css inline</p>
+	</div>
+	<div class="container2">
+		<h3>CSS Dasar</h3>
+		<p>Belajar CSS Dasar</p>
+	</div>
+
+	<div id="container3">
+		<input type="text" name="nama">
+		<input type="email" name="email"><br/>
+		<a href="https://google.com">Ke Google</a>
+	</div>
+
+</body>
+</html>
