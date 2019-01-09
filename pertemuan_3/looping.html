@@ -12,10 +12,23 @@
 		var arr = [1,2,3,4,5,6,7];
 		
 		for (var i = 0; i <= 10; i++) {
+			
+			if (i == 5) {
+				console.log("Ini forloop ke-"+i);
+				continue;
+			}
+
 			console.log("Loop ke-"+i);
+
 		}
 
 		for(value in arr) {
+
+			if (arr[value] == 5) {
+				console.log("Loooping dihentikan");
+				break;
+			}
+
 			console.log(arr[value]);
 		}
 
