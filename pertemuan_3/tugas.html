@@ -34,12 +34,12 @@
 			var uts = getName('uts');
 			var uas = getName('uas');
 
-			var tugas_konv = conversiPersen(tugas, 20);
-			var uts_konv = conversiPersen(uts, 30);
-			var uas_konv = conversiPersen(uas, 50);
+			var tugas_konv = conversiPersen(parseInt(tugas), 20);
+			var uts_konv = conversiPersen(parseInt(uts), 30);
+			var uas_konv = conversiPersen(parseInt(uas), 50);
 			var nilai_akhir = tugas_konv + uts_konv + uas_konv;
-			var grade = getGrade(nilai_akhir);
-			
+			var grade = getGrade(nilai_akhir); 
+
 			document.getElementById("result").innerHTML = "Nilai Akhir= "+nilai_akhir+"<p>Grade Nilai "+ grade +"</p>";
 		}
 
