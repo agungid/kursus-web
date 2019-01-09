@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tipe Data Javascript</title>
+</head>
+<body>
+
+	<h1>Tipe Data di Javascript</h1>
+	<div id="result">
+		
+	</div>
+
+	<script type="text/javascript">
+		var nama = " Anton Rifa'i ";
+		var arg1 = 'd';
+		var arg = "5 Saya sedang 1 belajar javascript 2 dasar 3";
+		var h_match = arg.match(/\d+/g);
+		var h_replace = arg.replace(/belajar/g, "berenang");
+		var html =  "<p>"+ nama.charAt(2) +"</p/>"+
+					"<p>"+ arg1.charCodeAt(0)+"</p/>"+
+					"<p>"+ nama.concat(" Ahmad")+"</p/>"+
+					"<p>"+ nama.length +"</p/>"+
+					"<p>"+ nama.indexOf('n', 3) +"</p/>"+
+					"<p>"+ arg.indexOf('belajar') +"</p/>"+
+					"<p>"+ arg1.localeCompare('e') +"</p/>"+
+					"<p>"+ h_match +"</p/>"+
+					"<p>"+ h_replace +"</p/>"+
+					"<p>"+ arg.search(/Saya/g) +"</p/>"+
+					"<p>"+ arg.slice(7,13) +"</p/>"+
+					"<p>"+ arg.split(" ") +"</p/>"+
+					"<p>"+ arg.substr(2,4) +"</p/>"+
+					"<p>"+ arg.substring(2,6) +"</p/>"+
+					"<p>"+ arg.toLowerCase() +"</p/>"+
+					"<p>"+ arg.toUpperCase() +"</p/>"+
+					"<p>"+ nama.trim() +"</p/>";
+		document.getElementById("result").innerHTML = html;
+	</script>
+</body>
+</html>
