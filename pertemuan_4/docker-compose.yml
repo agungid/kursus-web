@@ -1,0 +1,31 @@
+version: '2'
+
+services:
+  kursus_web:
+    build: .
+    volumes:
+      - ./:/var/www/html
+    restart: always
+    ports: 
+      - 80:80
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports: 
+      - 81:80
+    environment:
+      PMA_HOST: db
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: kursus
+      MYSQL_USER: uim
+      MYSQL_PASSWORD: uim123
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - pkl_uim:/var/lib/mysql
+
+volumes:
+  pkl_uim:
