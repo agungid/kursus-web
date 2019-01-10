@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Event Handler Javascript</title>
+</head>
+<body onload="alert('Selamat belajar javascript')">
+	<h1>Event Handler Javascript</h1>
+
+	<input type="text" onchange="event_change(this)">Onchange<br/>
+	<input type="text" onmousedown="event_change(this)">Onmousedown<br/>
+	<input type="text" onmouseup="event_change(this)">Onmouseup<br/>
+	<input type="text" ondblclick="event_change(this)">ondblclick<br/>
+	<input type="text" onfocus="event_change(this)">Onfocus<br/>
+	<input type="text" oninput="on_input(this)">OnInput<br/>
+
+	<input type="button" value="Click Me" onclick="event_click()">
+	<div id="result"></div>
+	<div style="background: aqua; width: 220px; height: 40px; padding: 20px;" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over</div>
+
+	<script type="text/javascript">
+		var dom = document.getElementById("result");
+
+		function event_change(arg) {
+			arg.value = arg.value.toUpperCase();
+		}
+
+		function on_input(arg) {
+			dom.innerHTML = arg.value;
+		}
+
+		function event_click() {
+			dom.innerHTML = "CLICK ME";
+		}
+
+		function mOver(arg) {
+			arg.innerHTML = "Thank you broo!!";
+			arg.style.background = "red";
+			arg.style.color = "white";
+		}
+
+		function mOut(arg) {
+			arg.innerHTML = "Mouse Over";
+			arg.style.background = "aqua";
+			arg.style.color = "black";
+		}
+
+	</script>
+</body>
+</html>
