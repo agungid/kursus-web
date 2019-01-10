@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar Fungsi Javascript</title>
+</head>
+<body>
+	<h1>Belajar Fungsi Javascript</h1>
+
+	<script type="text/javascript">
+		//Function
+		function test() {
+			console.log('From function');
+		}
+
+		test();
+
+		// Expresi function
+		var expresiFungsi = function(arg) {
+			console.log('Form Expresi funcion '+arg);
+		}
+
+		expresiFungsi('test');
+
+		//arrow function
+		var namePerson = (arg) => console.log('Form arrow function '+arg);
+
+		namePerson('testing');
+
+		// function returnValue(arg) {
+		// 	return arg;
+		// }
+
+		var returnValue = (arg) => arg;
+
+		console.log(returnValue("From return value"));
+	</script>
+</body>
+</html>
