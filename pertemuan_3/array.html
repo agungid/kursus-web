@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar Array</title>
+</head>
+<body>
+	<h1>Belajar Array</h1>
+
+	<script type="text/javascript">
+		var arr = ['testing', 11, [1,2,[9,6,4]]];
+
+		arr[3] = 'Add array item';
+		delete arr[1];
+		
+		console.log(arr[0]);
+		console.log(arr[1]);
+		console.log(arr[2][1]);
+		console.log(arr[2][2][1]);
+		console.log(arr);
+
+		// Mehod array dalam javascript
+		var arr1 = [1,2,3,4,5,'a','b','c','d','e'];
+
+		//Menggabungkan array dengan join yang akan menjadikan
+		// array menjadi string
+		var h_join = arr1.join("-");
+		console.log(h_join);
+
+		//Membalikan urutan array
+		var h_reverse = arr1.reverse();
+		console.log(h_reverse);
+
+		//Mengurutkan array
+		var arr2 = ['desi', 'dani', 'goblin', 'andi', 'nikita'];
+		console.log(arr2);
+		console.log(arr2.sort());
+
+		// Menyambung array
+		console.log(arr2.concat('Arifin', 'Anang', 'Janet'));
+
+		//Memotong array
+		console.log(arr2.slice(1,5));
+
+		// Memotong dengan splice
+		var arr3 = [1,2,3,4,5,6];
+		console.log(arr3);
+		var arr3_splice = arr3.splice(3);
+		console.log(arr3_splice);
+
+		//menghapus dengan splice
+		var arr4 = [1,2,3,4,5,6];
+		console.log(arr4);
+		var del_arr4 = arr4.splice(2, 3);
+		console.log('Array yang di potong '+del_arr4)
+		console.log(arr4);
+
+		//menambahkan array
+		var arr5 = [1,2,3,4,5,6];
+		console.log(arr5);
+		var add_arr5 = arr5.splice(3,0,16,18,20,100,1212);
+		console.log(arr5);
+
+		// Array push dan pop
+		var arr6 = [100,200];
+		console.log(arr6);
+		//Menambahkan item array di index terakhir
+		arr6.push(9,8,7,6,5);
+		console.log(arr6);
+		//Mengapus satu item array dari index terakhir
+		arr6.pop();
+		console.log(arr6);
+
+		// Array unshift shift
+		// Menambahkan item array dari index terdepan
+		arr6.unshift(1000,2000,3000); 
+		console.log(arr6);
+		// Menghapus item array dari index terdepan
+		arr6.shift(); 
+		console.log(arr6);
+
+
+		//Filter array
+		var arr7 = [1,2,3,4,5,6,7,8,9];
+
+		var filterArray = arr7.filter(function(item){
+			return item % 2 === 0;
+		});
+
+		console.log(arr7);
+		console.log(filterArray);
+
+		console.log(2==='2');
+
+		arr7.forEach(function(item) {
+			console.log('Foreach ke-'+item);
+		});
+
+		var persons = [
+			{ name: 'Andi', address: 'Bangkalan' },
+			{ name: 'Dani', address: 'Pamekasna' },
+			{ name: 'Sayful', address: 'Sumennep' }
+		];
+		
+		persons.map(function(value, key) {
+			console.log(value.name+" alamat "+value.address);
+		});
+
+	</script>
+</body>
+</html>
