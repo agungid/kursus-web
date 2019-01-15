@@ -34,6 +34,7 @@
 </head>
 <body>
 	<div class="container">
+		<h3>Tambah Data</h3>
 		<form action="proses_tambah.php" method="POST" accept-charset="utf-8">
 			<div class="form-group">
 				<label>Nama</label>

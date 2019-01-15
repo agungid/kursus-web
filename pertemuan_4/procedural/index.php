@@ -30,6 +30,15 @@ require 'koneksi.php';
 		table caption a:hover {
 			color: #efa7ff;
 		}
+
+		table tr td a {
+			text-decoration: none;
+			color: blue;
+		}
+
+		table tr td a:hover {
+			color: #efa7ff;
+		}
 	</style>
 </head>
 <body>
@@ -42,6 +51,7 @@ require 'koneksi.php';
 					<th>Nama</th>
 					<th>Phone</th>
 					<th>Address</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -56,6 +66,10 @@ require 'koneksi.php';
 							<td>$data[name]</td>
 							<td>$data[phone]</td>
 							<td>$data[address]</td>
+							<td>
+								<a href='edit.php?id=$data[id]'>Edit</a> | 
+								<a href='hapus.php?id=$data[id]'>Hapus</a>
+							</td>
 						</tr>";
 
 						$no++;
