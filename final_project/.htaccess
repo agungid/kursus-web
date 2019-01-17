@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^login(.*)$ login.php [L]
+RewriteRule ^home(.*)$ index.php?home [L]
+RewriteRule ^barang(.*)$ index.php?barang [L]
+
+Options All +Indexes
+
+</IfModule>

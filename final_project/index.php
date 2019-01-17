@@ -1,3 +1,9 @@
+<?php 
+session_start(); 
+
+if (!empty($_SESSION['user_id'])) {
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +32,20 @@
 		<div class="container-fluid page-body-wrapper">
 		<?php
 		include 'sidebar.php';
-		include 'main-panel.php';
 		?>
+			<div class="main-panel">
+			  <div class="content-wrapper">
+			    <?php
+			        if (isset($_GET['home'])) {
+			          include "dashboard.php";
+			        } else if(isset($_GET['barang'])) {
+			          include "table.php";
+			        }
+			    ?>
+			  </div>
+			  
+			  <?php include 'footer.php' ?>
+			</div>
 		</div>
 	</div>
 
@@ -46,3 +64,10 @@
 	<!-- End custom js for this page-->
 </body>
 </html>
+
+<?php
+
+} else {
+	header('location:login');
+}
+?>

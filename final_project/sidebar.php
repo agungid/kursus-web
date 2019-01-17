@@ -14,36 +14,22 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-success btn-block">Mahasiswa
+        <a class="btn btn-success btn-block" href="index.php?page=add_barang">Barang
           <i class="mdi mdi-plus"></i>
-        </button>
+        </a>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="index.php">
+      <a class="nav-link" href="/home">
         <i class="menu-icon mdi mdi-television"></i>
         <span class="menu-title">Dashboard</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-        <i class="menu-icon mdi mdi-account-outline"></i>
-        <span class="menu-title">Mahasiswa</span>
-        <i class="menu-arrow"></i>
+      <a class="nav-link" href="/barang">
+        <i class="menu-icon mdi mdi-file-document-box"></i>
+        <span class="menu-title">Barang</span>
       </a>
-      <div class="collapse" id="ui-basic">
-        <ul class="nav flex-column sub-menu">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Keuangan</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">KRS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">KHS</a>
-          </li>
-        </ul>
-      </div>
     </li>
   </ul>
 </nav>

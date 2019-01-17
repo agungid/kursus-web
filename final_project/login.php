@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!empty(isset($_SESSION['user_id']))) {
+  header('location:home');
+} else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,11 +34,11 @@
         <div class="row w-100">
           <div class="col-lg-4 mx-auto">
             <div class="auto-form-wrapper">
-              <form action="#">
+              <form action="proses_login.php" method="POST">
                 <div class="form-group">
                   <label class="label">Username</label>
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Username">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -41,7 +49,7 @@
                 <div class="form-group">
                   <label class="label">Password</label>
                   <div class="input-group">
-                    <input type="password" class="form-control" placeholder="*********">
+                    <input type="password" class="form-control" name="password" placeholder="*********">
                     <div class="input-group-append">
                       <span class="input-group-text">
                         <i class="mdi mdi-check-circle-outline"></i>
@@ -50,7 +58,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-primary submit-btn btn-block">Login</button>
+                  <button type="submit" class="btn btn-primary submit-btn btn-block">Login</button>
                 </div>
                 <div class="form-group d-flex justify-content-between">
                   <div class="form-check form-check-flat mt-0">
@@ -97,3 +105,5 @@
 </body>
 
 </html>
+
+<?php } ?>
