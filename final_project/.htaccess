@@ -4,6 +4,7 @@ RewriteEngine on
 RewriteRule ^login(.*)$ login.php [L]
 RewriteRule ^home(.*)$ index.php?home [L]
 RewriteRule ^barang(.*)$ index.php?barang [L]
+RewriteRule ^users(.*)$ index.php?users [L]
 
 Options All +Indexes
 

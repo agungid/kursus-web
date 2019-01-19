@@ -22,6 +22,7 @@ if (mysqli_num_rows($result) > 0) {
 
 	$_SESSION['user_id'] = $data['id'];
 	$_SESSION['unit_id'] = $data['unit_id'];
+	$_SESSION['level'] = $data['level'];
 	header('location:home');
 } else {
 	echo "Username or password salah!! <br/><br/> Anda akan diarahkan secara otomatis. jika tidak bisa klik <a href='/login'>disini</a>";

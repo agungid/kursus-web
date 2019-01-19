@@ -40,6 +40,14 @@ if (!empty($_SESSION['user_id'])) {
 			          include "dashboard.php";
 			        } else if(isset($_GET['barang'])) {
 			          include "table.php";
+			        } else if(isset($_GET['users'])) {
+			          include "user/read.php";
+			        } else if(isset($_GET['units'])) {
+			          include "units/read.php";
+			        } else if (isset($_GET['add_unit'])) {
+			        	include "units/add.php";
+			        } else if (isset($_GET['edit_unit'])) {
+			        	include "units/edit.php";
 			        }
 			    ?>
 			  </div>
